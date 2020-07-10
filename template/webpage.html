@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>BANK_NOTE API</title>
+	<link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch&display=swap" rel="stylesheet" type='text/css'>
+	<link href='ttps://fonts.googleapis.com/css2?family=Bangers&display=swap' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<div class="login">
+	<h1>Bank Note Authenticator</h1>
+	<form action="{{ url_for('predict_note_auth')}}" method="post">
+		<input type="text" name="variance" placeholder="variance" required="required" />
+		<input type="text" name="skewness" placeholder="skewness" required="required" />
+		<input type="text" name="curtosis" placeholder="curtosis" required="required" />
+		<input type="text" name="entropy" placeholder="entropy" required="required" />
+
+		<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+	</form>
+
+<br>
+<br>
+{{prediction_text}}
+</div>
+
+</body>
+</html>
