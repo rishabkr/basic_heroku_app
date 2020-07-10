@@ -1,0 +1,1 @@
+web: gunicorn bank_note_flask:app
